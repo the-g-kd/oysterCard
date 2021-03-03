@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.coding.challenge.oystercard.models.InsufficnientFundsException;
+import com.coding.challenge.oystercard.exceptions.InsufficnientFundsException;
 import com.coding.challenge.oystercard.models.OysterCard;
 
 public class OysterCardTest {

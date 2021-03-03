@@ -1,5 +1,6 @@
 package com.coding.challenge.oystercard.models;
 
+import com.coding.challenge.oystercard.exceptions.InsufficnientFundsException;
 import com.coding.challenge.oystercard.models.Journey.JourneyBuilder;
 
 import lombok.AllArgsConstructor;
