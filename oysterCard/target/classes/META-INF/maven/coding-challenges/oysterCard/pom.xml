@@ -4,4 +4,13 @@
   <artifactId>oysterCard</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>oysterCard</name>
+  
+  <dependencies>
+  <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.16</version>
+			
+		</dependency>
+  </dependencies>
 </project>
