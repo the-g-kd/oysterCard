@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Journey {
-	private Station start;
-	private Station end;
+	private TravelMode start;
+	private TravelMode end;
 }

@@ -24,7 +24,8 @@ public class OysterCard {
 	}
 	
 	public double charge(double fare) throws InsufficnientFundsException {
-		//This could become a rule based thing later
+		
+		//This could become a rule based thing later - for example minimum balance etc.
 		if (balance > fare) {
 			balance -=fare;
 			//need to add audit here
