@@ -3,6 +3,8 @@ package com.coding.challenge.oystercard.tests;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 import com.coding.challenge.oystercard.exceptions.InsufficnientFundsException;
@@ -10,6 +12,7 @@ import com.coding.challenge.oystercard.models.Bus;
 import com.coding.challenge.oystercard.models.Journey;
 import com.coding.challenge.oystercard.models.OysterCard;
 import com.coding.challenge.oystercard.models.Station;
+import com.coding.challenge.oystercard.models.StationData;
 import com.coding.challenge.oystercard.models.TravelMode;
 /**
  * 
@@ -48,8 +51,11 @@ public class TransportModeTest {
 	}
 	
 	private double tapInAtStation(double initialTopUp) throws InsufficnientFundsException {
-		TravelMode holbourn = new Station(1, "Holburn");
-		Journey journey = new Journey(holbourn, null);
+		ArrayList<Integer> zoneList = new ArrayList();
+		zoneList.add(1);
+		StationData holbournStationData = new StationData(zoneList, "Holburn");
+		TravelMode holbourn = new Station(holbournStationData);
+		Journey journey = new Journey(holbournStationData, null);
 		OysterCard myOysterCard = new OysterCard(30.00, journey);
 		return holbourn.tapIn(myOysterCard);
 	}
@@ -87,7 +93,10 @@ public class TransportModeTest {
 	
 	private double tapInAtBus(double initialTopUp) throws InsufficnientFundsException {
 		TravelMode anyRandomStop = new Bus();
-		Journey journey = new Journey(anyRandomStop, null);
+		ArrayList<Integer> zoneList = new ArrayList();
+		zoneList.add(1);
+		StationData h2Data = new StationData(null, "H2");
+		Journey journey = new Journey(h2Data, null);
 		OysterCard myOysterCard = new OysterCard(30.00, journey);
 		return anyRandomStop.tapIn(myOysterCard);
 	}

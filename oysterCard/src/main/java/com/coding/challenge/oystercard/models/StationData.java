@@ -1,5 +1,7 @@
 package com.coding.challenge.oystercard.models;
 
+import java.util.ArrayList;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +11,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Journey {
-	private StationData start;
-	private StationData end;
+public class StationData {
+	public ArrayList<Integer> zoneList;
+	public String name;
+
+
 }

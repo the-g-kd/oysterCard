@@ -1,6 +1,9 @@
 package com.coding.challenge.oystercard.models;
 
+import java.util.ArrayList;
+
 import com.coding.challenge.oystercard.exceptions.InsufficnientFundsException;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,9 +16,8 @@ import lombok.NoArgsConstructor;
 public class Station implements TravelMode {
 	
 	public static final double MAX_FARE = 3.2;
-	private int zone;
-	private String name;
-	
+	private StationData data;
+
 	//This probably belongs in the Gate object. For now lets say its in Station.
 	/* (non-Javadoc)
 	 * @see com.coding.challenge.oystercard.models.TravelMode#tapIn(com.coding.challenge.oystercard.models.OysterCard)
